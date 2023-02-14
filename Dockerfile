@@ -11,4 +11,6 @@ COPY *.go ./
 
 RUN go build -o /hello-docker
 
+EXPOSE 3000
+
 CMD [ "/hello-docker" ]
