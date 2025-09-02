@@ -1,0 +1,18 @@
+FROM ubuntu
+
+RUN apt update && apt-get install -y \
+    curl \
+    wget \
+    git \
+    vim \
+    nano \
+    && rm -rf /var/lib/apt/lists/*
+
+    # download java
+RUN wget https://download.oracle.com/java/24/latest/jdk-24_linux-x64_bin.deb \
+    && apt install -y ./jdk-24_linux-x64_bin.deb
+
+WORKDIR /tinum/welcome
+
+
+
